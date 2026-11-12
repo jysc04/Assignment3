@@ -1,12 +1,5 @@
-
 import { Link } from "react-router-dom";
-import {
-  PawPrint,
-  MapPin,
-  Mail,
-  Phone,
-  Heart,
-} from "lucide-react";
+import { PawPrint, MapPin, Mail, Phone, Heart } from "lucide-react";
 import facebookLogo from "../assets/facebook.png";
 import instagramLogo from "../assets/instagram.png";
 import xLogo from "../assets/x.png";
@@ -14,9 +7,7 @@ import xLogo from "../assets/x.png";
 function Footer() {
   return (
     <footer className="site-footer">
-
       <div className="footer-main">
-
         {/* Brand */}
         <div className="footer-brand">
           <Link to="/" className="footer-logo">
@@ -25,44 +16,41 @@ function Footer() {
           </Link>
 
           <p>
-            Giving abandoned cats and dogs a second
-            chance at life through compassion, care
-            and responsible adoption.
+            Giving abandoned cats and dogs a second chance at life through
+            compassion, care and responsible adoption.
           </p>
 
-            <div className="footer-socials">
+          <div className="footer-socials">
+            {/* Facebook */}
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Facebook"
+            >
+              <img src={facebookLogo} alt="Facebook" />
+            </a>
 
-                {/* Facebook */}
-                <a
-                    href="https://www.facebook.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label="Facebook"
-                >
-                    <img src={facebookLogo} alt="Facebook" />
-                </a>
+            {/* Instagram */}
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram"
+            >
+              <img src={instagramLogo} alt="Instagram" />
+            </a>
 
-                {/* Instagram */}
-                <a
-                    href="https://www.instagram.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label="Instagram"
-                >
-                    <img src={instagramLogo} alt="Instagram" />
-                </a>
-
-                {/* X */}
-                <a
-                    href="https://www.x.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label="X"
-                >
-                    <img src={xLogo} alt="X" />
-                </a>
-
-            </div>
+            {/* X */}
+            <a
+              href="https://www.x.com/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="X"
+            >
+              <img src={xLogo} alt="X" />
+            </a>
+          </div>
         </div>
 
         {/* Quick Links */}
@@ -93,32 +81,24 @@ function Footer() {
 
           <p>
             <Mail size={17} />
-            <a href="mailto:hello@pethaven.example">
-              hello@pethaven.example
-            </a>
+            <a href="mailto:hello@pethaven.example">hello@pethaven.example</a>
           </p>
 
           <p>
             <Phone size={17} />
-            <a href="tel:+6560000000">
-              +65 6000 0000
-            </a>
+            <a href="tel:+6560000000">+65 6000 0000</a>
           </p>
         </div>
-
       </div>
 
       {/* Bottom Bar */}
       <div className="footer-bottom">
-        <p>
-          © {new Date().getFullYear()} Pet Haven. All rights reserved.
-        </p>
+        <p>© {new Date().getFullYear()} Pet Haven. All rights reserved.</p>
 
         <p className="footer-made-with">
           Made with <Heart size={14} fill="currentColor" /> for animals.
         </p>
       </div>
-
     </footer>
   );
 }
